@@ -1,3 +1,2 @@
-fs=require('fs')
-fs.mkdir "test54554s", (e)->
-	console.log e
+webdriver = require("webdriverio")
+driver = new webdriver.remote(desiredCapabilities: { browserName: 'chrome' }) 
