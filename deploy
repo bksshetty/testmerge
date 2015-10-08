@@ -1,2 +1,2 @@
 mkdir /home/kirthan/deploy
-put -rp "${HOME}/clone/*" /home/kirthan/deploy
+put -rp "${HOME}/clone/*" /home/kirthan/deploycc
