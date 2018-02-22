@@ -1,0 +1,15 @@
+machine:
+  node:
+    version: 5.8.0
+dependencies:
+  override:
+    - "true"
+test:
+  override:
+    - "true"
+deployment:
+  production:
+  test:
+    branch: master
+    commands:
+      - ssh ubuntu@ec2-54-152-41-172.compute-1.amazonaws.com "/home/pullgit.sh $CIRCLE_BRANCH"
