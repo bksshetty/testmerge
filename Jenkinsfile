@@ -1,14 +1,16 @@
 pipeline {
-    agent any 
+    agent none 
     stages {
-        stage('Stage 1') {
+        stage('Example Build') {
             steps {
-                echo 'Hello world!' 
+                echo 'Hello, Maven'
+                sh 'npm i jquery'
             }
-    test {
-        stage('test 1') {
+        }
+        stage('Example Test') {
             steps {
-                sh 'npm i jquery' 
+                echo 'install forever'
+                sh 'npm i forever'
             }
         }
     }
