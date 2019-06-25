@@ -1,15 +1,8 @@
 pipeline {
-    agent none 
+    agent { docker { image 'node:6.3' } }
     stages {
-        stage('Example Build') {
+        stage('build') {
             steps {
-                echo 'Hello, Maven'
-                sh 'npm i jquery'
-            }
-        }
-        stage('Example Test') {
-            steps {
-                echo 'install forever'
                 sh 'npm i forever'
             }
         }
